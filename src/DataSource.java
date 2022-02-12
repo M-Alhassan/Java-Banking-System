@@ -8,7 +8,7 @@ import java.io.IOException;
 public class DataSource {
 	public static AccountList getAccountList() throws IOException {
 
-		File file = new File("./bin/Data/accounts.txt");
+		File file = new File("./bin/Data/accounts.txt");	//file path
 		AccountList accountList;
 		try {
 			FileInputStream fis = new FileInputStream(file);
@@ -34,7 +34,7 @@ public class DataSource {
 	public static void updateDataSource(Account[] accountList) throws IOException {
 		BufferedWriter outputWriter = null;
 		outputWriter = new BufferedWriter(
-				new FileWriter("./bin/Data/accounts.txt"));
+				new FileWriter("./bin/Data/accounts.txt"));	//file path
 
 		for (int i = 0; i < accountList.length; i++) {
 			outputWriter.write(accountList[i].toString());
