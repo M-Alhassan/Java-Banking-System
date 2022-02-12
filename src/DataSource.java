@@ -34,7 +34,7 @@ public class DataSource {
 	public static void updateDataSource(Account[] accountList) throws IOException {
 		BufferedWriter outputWriter = null;
 		outputWriter = new BufferedWriter(
-				new FileWriter("C:/ICS102workspace/ICSPROJECT/bin/Data/accounts.txt"));
+				new FileWriter("./bin/Data/accounts.txt"));
 
 		for (int i = 0; i < accountList.length; i++) {
 			outputWriter.write(accountList[i].toString());
